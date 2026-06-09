@@ -1,6 +1,8 @@
 # Kanagawa Dragon palette (near-black background #181616)
 # Makes the terminal, lazygit, and nvim all share the same near-black theme
 theme = Kanagawa Dragon
+font-family = FiraCode Nerd Font
+font-size = 14
 
 # Remove the empty border/padding around terminal content so nvim fills the window
 window-padding-x = 0
