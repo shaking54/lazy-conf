@@ -24,12 +24,23 @@ editor, shell, and git UI all share the same near-black palette.
 
 ## Install
 
-Clone and symlink (or copy) each directory into place:
+### New machine (one command)
 
 ```sh
 git clone git@github.com:shaking54/lazy-conf.git
 cd lazy-conf
+./install.sh
+```
 
+`install.sh` will:
+1. Install **Homebrew** if missing
+2. `brew install` neovim, lazygit, fzf, tmux, ghostty
+3. Install **Oh My Zsh** if missing
+4. Symlink all configs into place and copy `.zshrc` (backs up any existing one)
+
+### Manual
+
+```sh
 # Neovim (LazyVim)
 ln -s "$PWD/nvim" ~/.config/nvim
 
@@ -43,7 +54,6 @@ ln -s "$PWD/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.ym
 
 # Zsh — copy theme and source .zshrc (or merge into existing ~/.zshrc)
 cp zsh/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme
-# Then add/merge zsh/.zshrc contents into ~/.zshrc
 ```
 
 On first launch Neovim will bootstrap lazy.nvim and install all plugins

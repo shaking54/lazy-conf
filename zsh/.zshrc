@@ -15,3 +15,11 @@ fzf-history-widget() {
 }
 zle -N fzf-history-widget
 bindkey '^R' fzf-history-widget
+
+# tmux
+alias t='tmux'
+alias ta='tmux attach-session -t'
+alias tl='tmux list-sessions'
+alias tn='tmux new-session -s'
+alias tk='tmux kill-session -t'
+alias td='tmux detach'
