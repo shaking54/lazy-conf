@@ -1,14 +1,15 @@
 # lazy-conf
 
 Personal dotfiles for a unified [Kanagawa Dragon](https://github.com/rebelot/kanagawa.nvim)
-themed terminal setup. Bundles the configs for three tools so the terminal,
-editor, and git UI all share the same near-black palette.
+themed terminal setup. Bundles the configs for four tools so the terminal,
+editor, shell, and git UI all share the same near-black palette.
 
 | Tool | Config in repo | Installs to |
 |------|----------------|-------------|
 | [LazyVim](https://www.lazyvim.org/) (Neovim) | `nvim/` | `~/.config/nvim` |
 | [lazygit](https://github.com/jesseduffield/lazygit) | `lazygit/config.yml` | `~/Library/Application Support/lazygit/config.yml` (macOS)<br>`~/.config/lazygit/config.yml` (Linux) |
 | [Ghostty](https://ghostty.org/) | `ghostty/config` | `~/.config/ghostty/config` |
+| [Oh My Zsh](https://ohmyz.sh/) | `zsh/` | `~/.zshrc` + `~/.oh-my-zsh/themes/passion.zsh-theme` |
 
 ## Highlights
 
@@ -18,6 +19,8 @@ editor, and git UI all share the same near-black palette.
   a `<C-g>` keymap to toggle lazygit from anywhere via snacks.nvim.
 - **lazygit** uses defaults (empty config) and inherits its colors from the
   terminal theme.
+- **Zsh** uses the `passion` theme with a custom fzf history widget (`^R`) for
+  exact, chronological history search.
 
 ## Install
 
@@ -37,6 +40,10 @@ ln -s "$PWD/ghostty/config" ~/.config/ghostty/config
 # lazygit (macOS path shown; use ~/.config/lazygit on Linux)
 mkdir -p ~/Library/Application\ Support/lazygit
 ln -s "$PWD/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.yml
+
+# Zsh — copy theme and source .zshrc (or merge into existing ~/.zshrc)
+cp zsh/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme
+# Then add/merge zsh/.zshrc contents into ~/.zshrc
 ```
 
 On first launch Neovim will bootstrap lazy.nvim and install all plugins
