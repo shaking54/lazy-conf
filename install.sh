@@ -39,6 +39,9 @@ cp "$REPO_DIR/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.
 
 # Zsh
 cp "$REPO_DIR/zsh/passion.zsh-theme" ~/.oh-my-zsh/themes/passion.zsh-theme
-cp "$REPO_DIR/zsh/.zshrc" ~/.zshrc
+cp "$REPO_DIR/zsh/.zshrc.shared" ~/.zshrc.shared
+if ! grep -q 'source ~/.zshrc.shared' ~/.zshrc 2>/dev/null; then
+  echo 'source ~/.zshrc.shared' >> ~/.zshrc
+fi
 
 echo "Done. Open a new shell or run: source ~/.zshrc"
