@@ -1,0 +1,10 @@
+# Kanagawa Dragon palette (near-black background #181616)
+# Makes the terminal, lazygit, and nvim all share the same near-black theme
+theme = Kanagawa Dragon
+
+# Remove the empty border/padding around terminal content so nvim fills the window
+window-padding-x = 0
+window-padding-y = 0
+
+# Don't add extra padding when the cell grid doesn't divide evenly
+window-padding-balance = true
