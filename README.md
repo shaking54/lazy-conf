@@ -36,24 +36,25 @@ cd lazy-conf
 1. Install **Homebrew** if missing
 2. `brew install` neovim, lazygit, fzf, tmux, ghostty
 3. Install **Oh My Zsh** if missing
-4. Symlink all configs into place and copy `.zshrc` (backs up any existing one)
+4. Copy all configs into place, overwriting any existing files
 
 ### Manual
 
 ```sh
 # Neovim (LazyVim)
-ln -s "$PWD/nvim" ~/.config/nvim
+cp -r nvim ~/.config/nvim
 
 # Ghostty
 mkdir -p ~/.config/ghostty
-ln -s "$PWD/ghostty/config" ~/.config/ghostty/config
+cp ghostty/config ~/.config/ghostty/config
 
 # lazygit (macOS path shown; use ~/.config/lazygit on Linux)
 mkdir -p ~/Library/Application\ Support/lazygit
-ln -s "$PWD/lazygit/config.yml" ~/Library/Application\ Support/lazygit/config.yml
+cp lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
 
-# Zsh — copy theme and source .zshrc (or merge into existing ~/.zshrc)
+# Zsh
 cp zsh/passion.zsh-theme ~/.oh-my-zsh/themes/passion.zsh-theme
+cp zsh/.zshrc ~/.zshrc
 ```
 
 On first launch Neovim will bootstrap lazy.nvim and install all plugins
