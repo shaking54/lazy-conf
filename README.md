@@ -1,8 +1,8 @@
 # lazy-conf
 
-Personal dotfiles for a unified [Kanagawa Dragon](https://github.com/rebelot/kanagawa.nvim)
-themed terminal setup. Bundles the configs for four tools so the terminal,
-editor, shell, and git UI all share the same near-black palette.
+Personal dotfiles for a terminal setup with a light Ghostty theme and
+[Kanagawa Dragon](https://github.com/rebelot/kanagawa.nvim) in Neovim.
+Bundles configs for the terminal, editor, shell, and git UI.
 
 | Tool | Config in repo | Installs to |
 |------|----------------|-------------|
@@ -13,8 +13,8 @@ editor, shell, and git UI all share the same near-black palette.
 
 ## Highlights
 
-- **Ghostty** uses the built-in `Kanagawa Dragon` theme with zero window padding
-  so Neovim fills the whole window.
+- **Ghostty** uses `Builtin Light` with a white background, default window
+  decorations, and zero window padding so Neovim fills the whole window.
 - **Neovim** runs LazyVim with the `kanagawa` colorscheme (`dragon` variant) and
   a `<C-g>` keymap to toggle lazygit from anywhere via snacks.nvim.
 - **lazygit** uses defaults (empty config) and inherits its colors from the
